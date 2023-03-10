@@ -2,13 +2,13 @@ import useForm from 'shared/hooks/useForm';
 import TextField from 'shared/components/TextField/TextField';
 import Button from 'shared/components/Button/Button';
 
-import initialState from './initialState';
+import initialStateForm from './initialStateForm';
 import fields from './fields';
 
 import css from './register-form.module.scss';
 
 const RegisterForm = ({ onSubmit }) => {
-    const { state, handleChange, handleSubmit } = useForm({ initialState, onSubmit });
+    const { state, handleChange, handleSubmit } = useForm({ initialStateForm, onSubmit });
     return (
       <form className={css.wrapper} onSubmit={handleSubmit}>
         <TextField
