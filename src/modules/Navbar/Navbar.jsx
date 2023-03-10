@@ -15,6 +15,7 @@ const getFullName = ({ isActive }) => {
 const Navbar = () => {
 
   const isLogin = useSelector(isUserLogin);
+  //const isLogin = useSelector(store=>store.auth.isLogin)
 
     const elements = items.map(({ id, text, link }) =>
       <li key={id}>

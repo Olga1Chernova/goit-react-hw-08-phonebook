@@ -1,1 +1,1 @@
-export const isUserLogin = ({ auth }) => auth.isUserLogin;
+export const isUserLogin = ({ auth }) => auth.isLogin;
