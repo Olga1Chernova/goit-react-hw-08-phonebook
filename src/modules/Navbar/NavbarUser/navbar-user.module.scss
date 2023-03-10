@@ -1,6 +1,11 @@
+.wrapper{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
 .button{
         margin-top: 10px;
-        margin-left: 40px;
         display: block;
         width: 120px;
         height: 40px;
@@ -12,4 +17,9 @@
             border: 1px solid red;
             background-color: rgb(224, 105, 105);
         }
+}
+
+.username{
+    font-size: 18px;
+    text-decoration: underline red;
 }

@@ -15,5 +15,17 @@ export const signUp = createAsyncThunk(
     }
 )
 
+export const logIn = createAsyncThunk(
+    "auth/login",
+    async (data, { rejectWithValue }) => {
+        try {
+            const { data: result } = await api.logIn(data);
+            return result;
+        }
+        catch({response}) {
+            return rejectWithValue(response);
+        }
+    }
+)
 
 
