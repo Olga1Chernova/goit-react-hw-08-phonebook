@@ -9,7 +9,6 @@
 }
 
 .contacts__input {
-    border: 1px solid darkblue;
     border-radius: 20px;
     width: 240px;
     height: 40px;
@@ -17,4 +16,13 @@
     font-size: 20px;
     padding: 5px 15px 5px;
     margin-top: 20px;
+    &:focus {
+            border-color: red;
+            outline: none;
+        }
+    
+        &::placeholder {
+            color: red;
+            font-weight: bold;
+        }
 }

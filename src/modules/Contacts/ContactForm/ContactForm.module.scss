@@ -6,8 +6,8 @@
 
     padding: 30px 240px 30px 30px;
 
-    background-color:  #e4f38e;;
-    border: 1px solid #008080;
+    background-color: rgb(224, 105, 105);
+    border: 1px solid red;
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
@@ -16,17 +16,25 @@
 .form__label {
     font-size: 24px;
     margin-bottom: 10px;
+    color: wheat;
 }
 
 .form__input {
-    border: 1px solid darkblue;
     width: 240px;
     height: 40px;
     font-size: 20px;
     padding: 10px;
     margin-bottom: 20px;
     border-radius: 25px;
-    border: 1px solid #ccc;
+    &:focus {
+        border-color: red;
+        outline: none;
+    }
+    
+    &::placeholder {
+        color: red;
+        font-weight: bold;
+    }
 }
 
 .form__button {
@@ -35,13 +43,13 @@
 
     width: 240px;
     height: 44px;
-    background-color: #008080;
+    background-color: red;
     color: #ffffff;
     padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
 
     &:hover{
-        background-color: #006666;
+        background-color: #720e07;
     }
 }
