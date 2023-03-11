@@ -13,17 +13,17 @@ const getFullName = ({ isActive }) => {
 }
 
 const Navbar = () => {
-
   const isLogin = useSelector(isUserLogin);
+  const filteredItems = !isLogin ? items.filter(item => !item.private) : items;
   //const isLogin = useSelector(store=>store.auth.isLogin)
 
-    const elements = items.map(({ id, text, link }) =>
+    const elements = filteredItems.map(({ id, text, link }) => (
       <li key={id}>
         <NavLink className={getFullName} to={link}>
           {text}
         </NavLink>
       </li>
-  );
+    ));
 
     return (
       <ul className={css.menu}>

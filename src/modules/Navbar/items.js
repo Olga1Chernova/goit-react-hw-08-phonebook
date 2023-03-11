@@ -4,17 +4,20 @@ const items = [
     {
         id: nanoid(),
         text: "Register",
-        link: "/register"
+        link: "/register",
+        private: false,
     },
     {
         id: nanoid(),
         text: "Login",
-        link: "/login"
+        link: "/login",
+        private: false,
     },
     {
         id: nanoid(),
         text: "Contacts",
-        link: "/contacts"
+        link: "/contacts",
+        private: true,
     }
 ];
 
