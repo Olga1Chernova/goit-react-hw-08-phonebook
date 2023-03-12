@@ -1,20 +1,17 @@
 import { configureStore } from "@reduxjs/toolkit";
-import {persistStore, FLUSH,
-  REHYDRATE,
-  PAUSE,
-  PERSIST,
-  PURGE,
-  REGISTER,} from "redux-persist";
+import {persistStore} from "redux-persist";
 
 import persistedReducer from "./root-reducer.js";
 
 export const store = configureStore({
     reducer: persistedReducer,
      middleware: (getDefaultMiddleware) =>
-    getDefaultMiddleware({
-      serializableCheck: {
-        ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
-      },
+        getDefaultMiddleware({
+          serializableCheck: false,
+          // look explanation https://stackoverflow.com/questions/73259876/a-non-serializable-value-was-detected-in-an-action
+          // serializableCheck: {
+          //   ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
+          // },
     }),
 });
 

@@ -25,10 +25,10 @@ const authSlice = createSlice({
                 state.token = token;
                 state.isLogin = true;
            }) 
-           .addCase(signUp.rejected, (state, {payload}) => {
-                state.loading = false;
-                state.error = payload;
-           }) 
+             .addCase(signUp.rejected, (state, { payload }) => {
+               state.loading = false;
+               state.error = payload.data.message;
+           })
         
         
            .addCase(logIn.pending, (state) => {
